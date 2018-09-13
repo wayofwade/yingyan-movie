@@ -4392,6 +4392,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 exports.default = {
   components: { helloWorld: _HelloWorld2.default, secondDiv: _secondDiv2.default, thirdDiv: _thirdDiv2.default, fourthDiv: _fourthDiv2.default, Config: _config2.default },
@@ -21187,10 +21193,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/HelloWorld.vue"
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/testComponent/HelloWorld.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-469af010"
+__vue_options__._scopeId = "data-v-0853fc14"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -21354,10 +21360,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/secondDiv.vue"
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/testComponent/secondDiv.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-632fc51d"
+__vue_options__._scopeId = "data-v-37e32899"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -21558,10 +21564,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/thirdDiv.vue"
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/testComponent/thirdDiv.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-aa13be8c"
+__vue_options__._scopeId = "data-v-de6b4484"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -21727,10 +21733,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/fourthDiv.vue"
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/testComponent/fourthDiv.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-018918b7"
+__vue_options__._scopeId = "data-v-5387079a"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {

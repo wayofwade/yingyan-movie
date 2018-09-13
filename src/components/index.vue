@@ -1,3 +1,9 @@
+<!--
+1-电影列表-电影详情
+2-电影圈子类似朋友圈评论。评论发表
+3-测试的组件
+4-我的电影，收藏，评论等等
+-->
 <template>
     <div>
         <div class="topDiv" :style="contentStyle">
@@ -20,10 +26,10 @@
 </template>
 <script>
 import { Utils } from 'weex-ui'
-import helloWorld from './HelloWorld.vue'
-import secondDiv from './secondDiv.vue'
-import thirdDiv from './thirdDiv.vue'
-import fourthDiv from './fourthDiv.vue'
+import helloWorld from './testComponent/HelloWorld.vue'
+import secondDiv from './testComponent/secondDiv.vue'
+import thirdDiv from './testComponent/thirdDiv.vue'
+import fourthDiv from './testComponent/fourthDiv.vue'
 import Config from '../config/config' // 引入css和配置文件
 
 export default {

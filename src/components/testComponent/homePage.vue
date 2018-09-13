@@ -62,7 +62,7 @@
 import { WxcTabBar, Utils } from 'weex-ui'
 
 // import Config from 'https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js'
-import Config from '../config/config' // 引入css和配置文件
+import Config from '../../config/config' // 引入css和配置文件
 import MyPage from './myPage/myPage.vue'
 import helloWorld from './HelloWorld.vue'
 
