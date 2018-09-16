@@ -1,5 +1,5 @@
 <template>
-    <div>{{msg}}</div>
+    <div>{{msg}}ghjkgfghjk</div>
     <!--<someComponent></someComponent>-->
 </template>
 
