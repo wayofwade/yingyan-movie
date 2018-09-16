@@ -8,13 +8,14 @@
     <div>
         <div class="topDiv" :style="contentStyle">
         <!--<div class="topDiv" style="height:1000px">-->
-            <hello-world :height="listHeight" v-if="first === true"></hello-world>
+           <!-- <hello-world :height="listHeight" v-if="first === true"></hello-world>
             <second-div :height="listHeight" v-if="second === true"></second-div>
             <third-div :height="listHeight" v-if="third === true"></third-div>
             <fourth-div :height="listHeight" v-if="four === true"></fourth-div>
-            <!--<div v-if="third === true">fdhsufefehjefhjqh</div>
-            <div v-if="second === true">第二个</div>
-            <div v-if="four === true">第44444个</div>-->
+            &lt;!&ndash;<div v-if="third === true">fdhsufefehjefhjqh</div>-->
+           <!-- <div v-if="second === true">第二个</div>
+            <div v-if="four === true">第44444个</div>&ndash;&gt;-->
+            <router-view/>
         </div>
         <div class="bottomDiv" :style="tabStyles">
             <div class="div-son" @click="firstDiv('first')">one</div>
@@ -48,6 +49,7 @@ export default {
     }
   },
   created () {
+    this.$router.push('/movieList')
     this.first = false
     this.second = true
     this.third = false
@@ -63,25 +65,29 @@ export default {
       console.log(value)
       console.log('first')
       if (value === 'first') {
-        this.first = true
+        this.$router.push('/movieList')
+        /* this.first = true
         this.second = false
         this.third = false
-        this.four = false
+        this.four = false */
       } else if (value === 'second') {
-        this.first = false
+        this.$router.push('/movieCircle')
+        /* this.first = false
         this.second = true
         this.third = false
-        this.four = false
+        this.four = false */
       } else if (value === 'third') {
-        this.first = false
+        this.$router.push('/thirdDiv')
+        /* this.first = false
         this.second = false
         this.third = true
-        this.four = false
+        this.four = false */
       } else {
-        this.third = false
+        this.$router.push('/myMovies')
+        /* this.third = false
         this.first = false
         this.second = false
-        this.four = true
+        this.four = true */
       }
       /* switch (value) {
         case 'first':

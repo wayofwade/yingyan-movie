@@ -9,6 +9,7 @@
             <text @click="goto(10)" class="button">Go to 10</text>
             <text @click="goto(20)" class="button">Go to 20</text>
         </div>
+        678920345987483
     </div>
 </template>
 

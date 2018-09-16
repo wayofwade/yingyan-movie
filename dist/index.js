@@ -1655,24 +1655,47 @@ var _index = __webpack_require__(6);
 
 var _index2 = _interopRequireDefault(_index);
 
+var _movieList = __webpack_require__(267);
+
+var _movieList2 = _interopRequireDefault(_movieList);
+
+var _movieCircle = __webpack_require__(277);
+
+var _movieCircle2 = _interopRequireDefault(_movieCircle);
+
+var _myMovies = __webpack_require__(272);
+
+var _myMovies2 = _interopRequireDefault(_myMovies);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* global Vue */
-Vue.use(_vueRouter2.default);
+// import test from '@/routers/test.js'
+
 // import HelloWorld from '@/components/HelloWorld'
+Vue.use(_vueRouter2.default); /* global Vue */
+/* 1-此路由是针对component/index.vue的
+* 2-import加入路由移动端显示不了，[...c, ...a]这种形式好像不支持
+*  */
 
 
 module.exports = new _vueRouter2.default({
-  routes: [
-  /* {
-    path: '/hello',
-    name: 'HelloWorld',
-    component: HelloWorld
-  }, */
-  {
+  routes: [{
     path: '/',
     name: 'homePage',
     component: _index2.default
+  }, {
+    path: '/movieList',
+    name: 'movieList',
+    component: _movieList2.default
+  }, {
+    path: '/movieCircle',
+    name: 'movieCircle',
+    component: _movieCircle2.default
+  }, {
+    path: '/myMovies',
+    name: 'myMovies',
+    component: _myMovies2.default
+    // , ...test
   }]
 });
 
@@ -4398,6 +4421,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 exports.default = {
   components: { helloWorld: _HelloWorld2.default, secondDiv: _secondDiv2.default, thirdDiv: _thirdDiv2.default, fourthDiv: _fourthDiv2.default, Config: _config2.default },
@@ -4415,6 +4439,7 @@ exports.default = {
     };
   },
   created: function created() {
+    this.$router.push('/movieList');
     this.first = false;
     this.second = true;
     this.third = false;
@@ -4431,25 +4456,29 @@ exports.default = {
       console.log(value);
       console.log('first');
       if (value === 'first') {
-        this.first = true;
-        this.second = false;
-        this.third = false;
-        this.four = false;
+        this.$router.push('/movieList');
+        /* this.first = true
+        this.second = false
+        this.third = false
+        this.four = false */
       } else if (value === 'second') {
-        this.first = false;
-        this.second = true;
-        this.third = false;
-        this.four = false;
+        this.$router.push('/movieCircle');
+        /* this.first = false
+        this.second = true
+        this.third = false
+        this.four = false */
       } else if (value === 'third') {
-        this.first = false;
-        this.second = false;
-        this.third = true;
-        this.four = false;
+        this.$router.push('/thirdDiv');
+        /* this.first = false
+        this.second = false
+        this.third = true
+        this.four = false */
       } else {
-        this.third = false;
-        this.first = false;
-        this.second = false;
-        this.four = true;
+        this.$router.push('/myMovies');
+        /* this.third = false
+        this.first = false
+        this.second = false
+        this.four = true */
       }
       /* switch (value) {
         case 'first':
@@ -21652,6 +21681,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 var dom = weex.requireModule('dom');
 exports.default = {
@@ -21702,7 +21732,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.goto(20)
       }
     }
-  }, [_vm._v("Go to 20")])])])
+  }, [_vm._v("Go to 20")])]), _vm._v("\n    678920345987483\n")])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
@@ -21910,23 +21940,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', [_c('div', {
     staticClass: ["topDiv"],
     style: _vm.contentStyle
-  }, [(_vm.first === true) ? _c('hello-world', {
-    attrs: {
-      "height": _vm.listHeight
-    }
-  }) : _vm._e(), (_vm.second === true) ? _c('second-div', {
-    attrs: {
-      "height": _vm.listHeight
-    }
-  }) : _vm._e(), (_vm.third === true) ? _c('third-div', {
-    attrs: {
-      "height": _vm.listHeight
-    }
-  }) : _vm._e(), (_vm.four === true) ? _c('fourth-div', {
-    attrs: {
-      "height": _vm.listHeight
-    }
-  }) : _vm._e()], 1), _c('div', {
+  }, [_c('router-view')], 1), _c('div', {
     staticClass: ["bottomDiv"],
     style: _vm.tabStyles
   }, [_c('div', {
@@ -21958,6 +21972,280 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }
   }, [_vm._v("four")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 266 */,
+/* 267 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(268)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(269)
+
+/* template */
+var __vue_template__ = __webpack_require__(270)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/movieList/movieList.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-aa6e0aa6"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 268 */
+/***/ (function(module, exports) {
+
+module.exports = {}
+
+/***/ }),
+/* 269 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// import someComponent from './someComponent'
+exports.default = {
+  name: '',
+  data: function data() {
+    return {
+      msg: '电影lit'
+    };
+  },
+
+  component: {
+    // someComponent
+  }
+};
+
+/***/ }),
+/* 270 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_vm._v(_vm._s(_vm.msg) + "\nasdfdgfhgdsdawfsgh\nfsgdhfgdfseasgrdhfds\n    dfdf\n")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 271 */,
+/* 272 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(273)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(274)
+
+/* template */
+var __vue_template__ = __webpack_require__(275)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/myMovies/myMovies.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-122022af"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 273 */
+/***/ (function(module, exports) {
+
+module.exports = {}
+
+/***/ }),
+/* 274 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+
+// import someComponent from './someComponent'
+exports.default = {
+  name: '',
+  data: function data() {
+    return {
+      msg: '我的电影，我的收藏。我的评论等'
+    };
+  },
+
+  component: {
+    // someComponent
+  }
+};
+
+/***/ }),
+/* 275 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_vm._v(_vm._s(_vm.msg))])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 276 */,
+/* 277 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(278)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(279)
+
+/* template */
+var __vue_template__ = __webpack_require__(280)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/movieCircle/movieCircle.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-69136e51"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 278 */
+/***/ (function(module, exports) {
+
+module.exports = {}
+
+/***/ }),
+/* 279 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+
+// import someComponent from './someComponent'
+exports.default = {
+  name: '',
+  data: function data() {
+    return {
+      msg: '电影评论圈子'
+    };
+  },
+
+  component: {
+    // someComponent
+  }
+};
+
+/***/ }),
+/* 280 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_vm._v(_vm._s(_vm.msg))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

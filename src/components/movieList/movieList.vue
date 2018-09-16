@@ -1,5 +1,9 @@
 <template>
-    <div>{{msg}}</div>
+    <div>{{msg}}
+    asdfdgfhgdsdawfsgh
+    fsgdhfgdfseasgrdhfds
+        dfdf
+    </div>
     <!--<someComponent></someComponent>-->
 </template>
 
