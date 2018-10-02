@@ -1,5 +1,7 @@
 <template>
-    <div>{{msg}}</div>
+    <div>{{msg}}
+        <div @click="back">返回</div>
+    </div>
     <!--<someComponent></someComponent>-->
 </template>
 
@@ -14,6 +16,11 @@ export default {
   },
   component: {
     // someComponent
+  },
+  methods: {
+    back () {
+      this.$router.go(-1)
+    }
   }
 }
 </script>
