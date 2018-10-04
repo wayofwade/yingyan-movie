@@ -6,6 +6,7 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import index from '@/components/index'
 import movieList from '@/components/movieList/movieList'
+import movieDetail from '@/components/movieList/movieDetail'
 import movieCircle from '@/components/movieCircle/movieCircle'
 import myMovies from '@/components/myMovies/myMovies'
 import test from '@/routers/test.js'
@@ -33,6 +34,11 @@ module.exports = new Router({
       path: '/myMovies',
       name: 'myMovies',
       component: myMovies
+    },
+    {
+      path: '/movieDetail',
+      name: 'movieDetail',
+      component: movieDetail
     }
   ].concat(test)
 })

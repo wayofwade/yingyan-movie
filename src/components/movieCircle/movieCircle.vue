@@ -1,5 +1,5 @@
 <template>
-    <div>{{msg}}
+    <div>{{msg}}做成朋友圈那种样子
         <div @click="back">返回</div>
     </div>
     <!--<someComponent></someComponent>-->

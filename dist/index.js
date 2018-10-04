@@ -1703,26 +1703,29 @@ var _movieList = __webpack_require__(266);
 
 var _movieList2 = _interopRequireDefault(_movieList);
 
-var _movieCircle = __webpack_require__(270);
+var _movieDetail = __webpack_require__(270);
+
+var _movieDetail2 = _interopRequireDefault(_movieDetail);
+
+var _movieCircle = __webpack_require__(274);
 
 var _movieCircle2 = _interopRequireDefault(_movieCircle);
 
-var _myMovies = __webpack_require__(274);
+var _myMovies = __webpack_require__(278);
 
 var _myMovies2 = _interopRequireDefault(_myMovies);
 
-var _test = __webpack_require__(278);
+var _test = __webpack_require__(282);
 
 var _test2 = _interopRequireDefault(_test);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* global Vue */
+// import HelloWorld from '@/components/HelloWorld'
+Vue.use(_vueRouter2.default); /* global Vue */
 /* 1-此路由是针对component/index.vue的
 * 2-import加入路由移动端显示不了，[...c, ...a]这种形式只支持一个元素的list
 *  */
-Vue.use(_vueRouter2.default);
-// import HelloWorld from '@/components/HelloWorld'
 
 
 module.exports = new _vueRouter2.default({
@@ -1742,6 +1745,10 @@ module.exports = new _vueRouter2.default({
     path: '/myMovies',
     name: 'myMovies',
     component: _myMovies2.default
+  }, {
+    path: '/movieDetail',
+    name: 'movieDetail',
+    component: _movieDetail2.default
   }].concat(_test2.default)
 });
 
@@ -4398,9 +4405,24 @@ module.exports = {
     "width": "180",
     "height": "100",
     "color": "#FFFFFF",
-    "backgroundColor": "#afddff",
+    "backgroundColor": "#41B883",
     "marginLeft": "2",
-    "marginRight": "2"
+    "marginRight": "2",
+    "paddingTop": "10",
+    "paddingRight": "10",
+    "paddingBottom": "10",
+    "paddingLeft": "10",
+    "boxSizing": "border-box"
+  },
+  "cell": {
+    "position": "absolute",
+    "top": 50,
+    "textAlign": "center",
+    "paddingLeft": "40",
+    "fontSize": "38",
+    "lineHeight": "40",
+    "height": "40",
+    "marginTop": "-20"
   }
 }
 
@@ -21952,28 +21974,36 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.firstDiv('first')
       }
     }
-  }, [_vm._v("one")]), _c('div', {
+  }, [_c('div', {
+    staticClass: ["cell"]
+  }, [_vm._v("电影库")])]), _c('div', {
     staticClass: ["div-son"],
     on: {
       "click": function($event) {
         _vm.firstDiv('second')
       }
     }
-  }, [_vm._v("two")]), _c('div', {
+  }, [_c('div', {
+    staticClass: ["cell"]
+  }, [_vm._v("电影评论")])]), _c('div', {
     staticClass: ["div-son"],
     on: {
       "click": function($event) {
         _vm.firstDiv('third')
       }
     }
-  }, [_vm._v("threeddd")]), _c('div', {
+  }, [_c('div', {
+    staticClass: ["cell"]
+  }, [_vm._v("threeddd")])]), _c('div', {
     staticClass: ["div-son"],
     on: {
       "click": function($event) {
         _vm.firstDiv('four')
       }
     }
-  }, [_vm._v("four")])])])
+  }, [_c('div', {
+    staticClass: ["cell"]
+  }, [_vm._v("four")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
@@ -22144,7 +22174,7 @@ exports.default = {
       }, 800);
     },
     watchDetail: function watchDetail() {
-      this.$router.push('/movieCircle');
+      this.$router.push('/movieDetail');
       console.log('查看电影详情--路由跳转');
     }
   }
@@ -22242,6 +22272,206 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/movieList/movieDetail.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-07e38f20"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 271 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "banner": {
+    "width": "750",
+    "paddingTop": "25",
+    "paddingRight": "25",
+    "paddingBottom": "25",
+    "paddingLeft": "25",
+    "fontSize": "60",
+    "textAlign": "center",
+    "fontWeight": "bold",
+    "color": "#41B883",
+    "backgroundColor": "rgb(162,217,192)",
+    "marginBottom": "20"
+  },
+  "moviePic": {
+    "width": "750",
+    "height": "450",
+    "paddingTop": 0,
+    "paddingRight": "30",
+    "paddingBottom": 0,
+    "paddingLeft": "30",
+    "boxSizing": "border-box",
+    "flexDirection": "column",
+    "backgroundColor": "rgba(162,217,192,0.2)",
+    "display": "flex",
+    "flexFlow": "row",
+    "justifyContent": "flex-start",
+    "flexWrap": "wrap"
+  },
+  "picDiv": {
+    "width": "320"
+  },
+  "textDiv": {
+    "fontSize": "30",
+    "paddingTop": "30",
+    "boxSizing": "border-box",
+    "color": "#41B883"
+  },
+  "textDetail": {
+    "fontSize": "30",
+    "lineHeight": "40"
+  },
+  "movieDesc-text": {
+    "paddingTop": 0,
+    "paddingRight": "30",
+    "paddingBottom": 0,
+    "paddingLeft": "30",
+    "boxSizing": "border-box"
+  }
+}
+
+/***/ }),
+/* 272 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// import someComponent from './someComponent'
+exports.default = {
+  name: '',
+  data: function data() {
+    return {
+      msg: 'Hello Vue.js',
+      movieDesc: '《李茶的姑妈》改编自开心麻花同名爆笑舞台剧。李茶（宋阳 饰）是个穷小子，姑妈（卢靖姗 饰）' + '却是全球女首富，自打李茶出生后二人便未曾谋面。为了娶到“势利眼富商”的女儿，李茶恳请姑妈出面牵线搭桥，' + '可各怀鬼胎的一行人却误将男员工黄沧海（黄才伦 饰）认作姑妈。为了各自的利益，黄沧海、李茶连同梁杰瑞（艾伦 饰）' + '三个人将计就计组团来“假扮姑妈”，' + '正当众人纷纷讨好这位“假姑妈”时，神秘的“真姑妈”现身了，一连串的爆笑故事也发生了......'
+    };
+  },
+
+  component: {
+    // someComponent
+  },
+  methods: {
+    back: function back() {
+      this.$router.go(-1);
+    }
+  }
+};
+
+/***/ }),
+/* 273 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: ["backTo"],
+    on: {
+      "click": _vm.back
+    }
+  }, [_c('text', {
+    staticClass: ["banner"]
+  }, [_vm._v("返回")])]), _vm._m(0), _c('div', {
+    staticClass: ["movieDesc"]
+  }, [_c('text', {
+    staticClass: ["movieDesc-text"]
+  }, [_vm._v("\n          " + _vm._s(_vm.movieDesc) + "\n        ")])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["moviePic"]
+  }, [_c('div', {
+    staticClass: ["picDiv"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "300px",
+      height: "450px"
+    },
+    attrs: {
+      "src": "../../../imgs/licha.jpg"
+    }
+  })]), _c('div', {
+    staticClass: ["textDiv"]
+  }, [_c('text', {
+    staticClass: ["textDetail"]
+  }, [_vm._v("电影名称：李茶的姑妈")]), _c('text', {
+    staticClass: ["textDetail"]
+  }, [_vm._v("导演：吴昱翰")]), _c('text', {
+    staticClass: ["textDetail"]
+  }, [_vm._v("类型: 喜剧")]), _c('text', {
+    staticClass: ["textDetail"]
+  }, [_vm._v("上映日期: 2018-09-30")]), _c('text', {
+    staticClass: ["textDetail"]
+  }, [_vm._v("片长: 113分钟")])])])
+}]}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 274 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(275)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(276)
+
+/* template */
+var __vue_template__ = __webpack_require__(277)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
 __vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/movieCircle/movieCircle.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
@@ -22260,13 +22490,13 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 271 */
+/* 275 */
 /***/ (function(module, exports) {
 
 module.exports = {}
 
 /***/ }),
-/* 272 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22303,11 +22533,11 @@ exports.default = {
 };
 
 /***/ }),
-/* 273 */
+/* 277 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v(_vm._s(_vm.msg) + "\n    "), _c('div', {
+  return _c('div', [_vm._v(_vm._s(_vm.msg) + "做成朋友圈那种样子\n    "), _c('div', {
     on: {
       "click": _vm.back
     }
@@ -22316,21 +22546,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 274 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(275)
+__vue_styles__.push(__webpack_require__(279)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(276)
+__vue_exports__ = __webpack_require__(280)
 
 /* template */
-var __vue_template__ = __webpack_require__(277)
+var __vue_template__ = __webpack_require__(281)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -22360,13 +22590,13 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 275 */
+/* 279 */
 /***/ (function(module, exports) {
 
 module.exports = {}
 
 /***/ }),
-/* 276 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22396,7 +22626,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 277 */
+/* 281 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -22405,7 +22635,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 278 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

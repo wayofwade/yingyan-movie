@@ -43,7 +43,7 @@ export default {
       }, 800)
     },
     watchDetail () {
-      this.$router.push('/movieCircle')
+      this.$router.push('/movieDetail')
       console.log('查看电影详情--路由跳转')
     }
   }
