@@ -18,10 +18,10 @@
             <router-view/>
         </div>
         <div class="bottomDiv" :style="tabStyles">
-            <div class="div-son" @click="firstDiv('first')"><div class="cell">电影库</div></div>
-            <div class="div-son" @click="firstDiv('second')"><div class="cell">电影评论</div></div>
-            <div class="div-son" @click="firstDiv('third')"><div class="cell">threeddd</div></div>
-            <div class="div-son" @click="firstDiv('four')"><div class="cell">four</div></div>
+            <div class="div-son" @click="firstDiv('first')"><text class="cell">电影库</text></div>
+            <div class="div-son" @click="firstDiv('second')"><text class="cell">电影圈</text></div>
+            <div class="div-son" @click="firstDiv('third')"><text class="cell">GOGO</text></div>
+            <div class="div-son" @click="firstDiv('four')"><text class="cell">我</text></div>
         </div>
     </div>
 </template>
@@ -146,7 +146,6 @@ export default {
         position: absolute;
         top: 50%;
         text-align: center;
-        padding-left: 40px;
         font-size: 38px;
         line-height: 40px;
         height:40px;

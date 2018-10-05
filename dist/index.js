@@ -4418,7 +4418,6 @@ module.exports = {
     "position": "absolute",
     "top": 50,
     "textAlign": "center",
-    "paddingLeft": "40",
     "fontSize": "38",
     "lineHeight": "40",
     "height": "40",
@@ -21705,7 +21704,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 var dom = weex.requireModule('dom');
 exports.default = {
@@ -21756,7 +21754,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.goto(20)
       }
     }
-  }, [_vm._v("Go to 20")])]), _vm._v("\n    678920345987483\n")])
+  }, [_vm._v("Go to 20")])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
@@ -21974,7 +21972,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.firstDiv('first')
       }
     }
-  }, [_c('div', {
+  }, [_c('text', {
     staticClass: ["cell"]
   }, [_vm._v("电影库")])]), _c('div', {
     staticClass: ["div-son"],
@@ -21983,27 +21981,27 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.firstDiv('second')
       }
     }
-  }, [_c('div', {
+  }, [_c('text', {
     staticClass: ["cell"]
-  }, [_vm._v("电影评论")])]), _c('div', {
+  }, [_vm._v("电影圈")])]), _c('div', {
     staticClass: ["div-son"],
     on: {
       "click": function($event) {
         _vm.firstDiv('third')
       }
     }
-  }, [_c('div', {
+  }, [_c('text', {
     staticClass: ["cell"]
-  }, [_vm._v("threeddd")])]), _c('div', {
+  }, [_vm._v("GOGO")])]), _c('div', {
     staticClass: ["div-son"],
     on: {
       "click": function($event) {
         _vm.firstDiv('four')
       }
     }
-  }, [_c('div', {
+  }, [_c('text', {
     staticClass: ["cell"]
-  }, [_vm._v("four")])])])])
+  }, [_vm._v("我")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
@@ -22493,7 +22491,55 @@ module.exports = __vue_exports__
 /* 275 */
 /***/ (function(module, exports) {
 
-module.exports = {}
+module.exports = {
+  "banner": {
+    "width": "750",
+    "paddingTop": "25",
+    "paddingRight": "25",
+    "paddingBottom": "25",
+    "paddingLeft": "25",
+    "fontSize": "60",
+    "textAlign": "center",
+    "fontWeight": "bold",
+    "color": "#41B883",
+    "backgroundColor": "rgb(162,217,192)"
+  },
+  "panel": {
+    "width": "680",
+    "marginLeft": "25",
+    "marginTop": "35",
+    "marginBottom": "35",
+    "flexDirection": "column",
+    "borderWidth": "2",
+    "borderStyle": "solid",
+    "borderColor": "rgb(162,217,192)",
+    "backgroundColor": "rgba(162,217,192,0.2)",
+    "display": "flex",
+    "flexFlow": "row",
+    "justifyContent": "flex-start",
+    "flexWrap": "wrap"
+  },
+  "moviePic": {
+    "width": "80",
+    "paddingTop": "10",
+    "paddingRight": "10",
+    "paddingBottom": "10",
+    "paddingLeft": "10",
+    "boxSizing": "border-box",
+    "textAlign": "right"
+  },
+  "movieDetail": {
+    "flex": 1,
+    "paddingLeft": "5",
+    "boxSizing": "border-box"
+  },
+  "bottomDetail-text": {
+    "fontSize": "23",
+    "textAlign": "left",
+    "wordBreak": "break-all",
+    "color": "#41B883"
+  }
+}
 
 /***/ }),
 /* 276 */
@@ -22512,22 +22558,48 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-// import someComponent from './someComponent'
+var modal = weex.requireModule('modal');
+var LOADMORE_COUNT = 4;
+
 exports.default = {
-  name: '',
   data: function data() {
     return {
-      msg: '电影评论圈子'
+      lists: [1, 2, 3, 4, 5],
+      userName: '用户名字',
+      userMessage: '用户发的朋友圈信息哈哈哈哈这个电影还不错的哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈'
     };
   },
 
-  component: {
-    // someComponent
-  },
   methods: {
-    back: function back() {
-      this.$router.go(-1);
+    fetch: function fetch(event) {
+      var _this = this;
+
+      modal.toast({ message: 'loadmore', duration: 1 });
+      setTimeout(function () {
+        var length = _this.lists.length;
+        for (var i = length; i < length + LOADMORE_COUNT; ++i) {
+          _this.lists.push(i + 1);
+        }
+      }, 800);
+    },
+    watchDetail: function watchDetail() {
+      this.$router.push('/movieDetail');
+      console.log('查看电影详情--路由跳转');
     }
   }
 };
@@ -22537,12 +22609,52 @@ exports.default = {
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v(_vm._s(_vm.msg) + "做成朋友圈那种样子\n    "), _c('div', {
+  return _c('list', {
+    attrs: {
+      "loadmoreoffset": "10"
+    },
     on: {
-      "click": _vm.back
+      "loadmore": _vm.fetch
     }
-  }, [_vm._v("返回")])])
-},staticRenderFns: []}
+  }, [_vm._m(0), _vm._l((_vm.lists), function(num, i) {
+    return _c('cell', {
+      key: i,
+      appendAsTree: true,
+      attrs: {
+        "append": "tree"
+      }
+    }, [_c('div', {
+      staticClass: ["panel"]
+    }, [_vm._m(1, true), _c('div', {
+      staticClass: ["movieDetail"]
+    }, [_c('div', {
+      staticClass: ["bottomDetail"]
+    }, [_c('text', {
+      staticClass: ["bottomDetail-text"]
+    }, [_vm._v(_vm._s(_vm.userMessage))])])])])])
+  })], 2)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('header', {
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('text', {
+    staticClass: ["banner"]
+  }, [_vm._v("电影圈")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["moviePic"]
+  }, [_c('image', {
+    staticStyle: {
+      width: "50px",
+      height: "50px"
+    },
+    attrs: {
+      "src": "../../../imgs/licha.jpg"
+    }
+  })])
+}]}
 module.exports.render._withStripped = true
 
 /***/ }),
@@ -22610,6 +22722,10 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
 
 // import someComponent from './someComponent'
 exports.default = {
@@ -22630,8 +22746,10 @@ exports.default = {
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v(_vm._s(_vm.msg) + "ghjkgfghjk")])
-},staticRenderFns: []}
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', [_vm._v("我的头像")]), _c('div', [_vm._v("我的订单信息")]), _c('div', [_vm._v("我的会员地址等等")])])
+}]}
 module.exports.render._withStripped = true
 
 /***/ }),

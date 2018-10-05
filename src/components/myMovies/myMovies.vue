@@ -1,5 +1,9 @@
 <template>
-    <div>{{msg}}ghjkgfghjk</div>
+    <div>
+        <div>我的头像</div>
+        <div>我的订单信息</div>
+        <div>我的会员地址等等</div>
+    </div>
     <!--<someComponent></someComponent>-->
 </template>
 
