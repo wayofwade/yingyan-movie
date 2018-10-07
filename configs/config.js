@@ -21,7 +21,8 @@ const config = {
     historyApiFallback: true,
     open: true,
     watchContentBase: true,
-    openPage: 'web/preview.html',
+    openPage: 'web/previewTest.html', // 扫描二维码的页面
+    // openPage: 'web/preview.html',
     watchOptions: {
       ignored: /node_modules/,
       aggregateTimeout: 300,
