@@ -8,9 +8,11 @@ const config = {
   pluginFilePath: 'plugins/plugins.js',
   // router
   routerFilePath: 'router.js',
+  // vuex
+  // storeFilePath: '@/vuex/store.js',
   // common
   templateDir: '.temp',
-  entryFilePath: 'entry.js',
+  entryFilePath: 'entry.js', // 入口文件
   // Module exclude from compile process
   excludeModuleReg: /node_modules(?!(\/|\\).*(weex).*)/,
   dev: {

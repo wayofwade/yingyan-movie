@@ -6,6 +6,11 @@ export default [
     path: '/thirdDiv',
     component: () => import('@/components/testComponent/thirdDiv.vue'),
     title: '第三个'
+  },
+  {
+    path: '/testVuex',
+    component: () => import('@/components/testComponent/testVuex.vue'),
+    title: 'testVuex'
   }
   /* {
     path: '/fourthDiv',

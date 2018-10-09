@@ -77,7 +77,7 @@ export default {
         this.third = false
         this.four = false */
       } else if (value === 'third') {
-        this.$router.push('/thirdDiv')
+        this.$router.push('/testVuex')
         /* this.first = false
         this.second = false
         this.third = true
