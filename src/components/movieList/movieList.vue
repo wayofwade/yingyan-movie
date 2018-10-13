@@ -10,8 +10,7 @@
                 </div>
                 <div class="movieDetail" @click="watchDetail">
                     <div class="topDetail">
-                    <text class="text">《李茶的姑妈》改编自开心麻花同名爆笑舞台剧。李茶（宋阳 饰）是个穷小子，姑妈（卢靖姗 饰）却是全球女首富，自打李茶出生后二人便未曾谋面。为了娶到“势利眼富商”的女儿，李茶恳请姑妈出面牵线搭桥，可各怀鬼胎的一行人却误将男员工黄沧海。
-                    </text>
+                    <text class="text">{{text}}</text>
                     </div>
                     <div class="bottomDetail">
                         <text class="bottomDetail-text" @click="watchDetail">查看更多</text></div>
@@ -29,6 +28,9 @@ const LOADMORE_COUNT = 4
 export default {
   data () {
     return {
+      text: '《李茶的姑妈》改编自开心麻花同名爆笑舞台剧。李茶（宋阳 饰）是个穷小子，姑妈（卢靖姗 饰）却是全球女首富，' +
+      '自打李茶出生后二人便未曾谋面。' +
+      '为了娶到“势利眼富商”的女儿，李茶恳请姑妈出面牵线搭桥，可各怀鬼胎。',
       lists: [1, 2, 3, 4, 5]
     }
   },
@@ -66,6 +68,7 @@ export default {
         margin-left: 75px;
         margin-top: 35px;
         margin-bottom: 35px;
+        box-sizing: border-box;
         flex-direction: column;
         /*justify-content: center;*/
         border-width: 2px;
@@ -91,21 +94,23 @@ export default {
         box-sizing: border-box;
     }
     .movieDetail{
-        height: 250px;
+        height: 260px;
         flex: 1;
         padding-left: 5px;
         box-sizing: border-box;
+        padding-bottom: 5px;
         width:calc(100% - 180px);
     }
     .topDetail{
         height:210px;
     }
     .bottomDetail{
-        height:40px;
+        height:45px;
     }
     .bottomDetail-text{
         text-align: right;
         width:400px;
-        height:40px;
+        font-size: 22px;
+        line-height: 45px;
     }
 </style>

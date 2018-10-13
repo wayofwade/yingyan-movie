@@ -1,17 +1,18 @@
 /**
  * Created by chencc on 2018/9/16.
+ * 引入vuex手机端调试有问题
  */
 export default [
   {
     path: '/thirdDiv',
     component: () => import('@/components/testComponent/thirdDiv.vue'),
     title: '第三个'
-  },
-  {
+  }
+  /* {
     path: '/testVuex',
     component: () => import('@/components/testComponent/testVuex.vue'),
     title: 'testVuex'
-  }
+  } */
   /* {
     path: '/fourthDiv',
     component: () => import('@/components/testComponent/fourthDiv.vue'),

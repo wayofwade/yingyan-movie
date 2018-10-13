@@ -1,11 +1,16 @@
 <template>
     <div>
         <div>
+            <text class="title">测试vuex</text>
+        </div>
+        <div>
             <text class="buttonDiv" @click="addVuex()">vuex加3</text>
             <text class="buttonDiv" @click="minusVuex()">vuex减3</text>
         </div>
-        {{$store.state.testVuex.count}}
-        {{msg}}
+        <div>
+            <text class="buttonDiv">{{count}}</text>
+            <text class="buttonDiv">{{msg}}</text>
+        </div>
     </div>
     <!--<someComponent></someComponent>-->
 </template>
@@ -22,8 +27,12 @@ export default {
   },
   computed: {
     count () {
-      return this.$store.state.count
+      return this.$store.getters.getCount
     }
+  },
+  mounted () {
+    // 可以打印count属性
+    console.log(this.$store.state.testVuex.count)
   },
   methods: {
     addVuex () {
@@ -41,6 +50,10 @@ export default {
 
 <style scoped>
 .buttonDiv{
-    font-size: 30px;
+    font-size: 35px;
+}
+.title{
+    font-size: 40px;
+    font-weight: 400;
 }
 </style>

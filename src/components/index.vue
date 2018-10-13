@@ -17,11 +17,29 @@
             <div v-if="four === true">第44444个</div>&ndash;&gt;-->
             <router-view/>
         </div>
-        <div class="bottomDiv" :style="tabStyles">
-            <div class="div-son" @click="firstDiv('first')"><text class="cell">电影库</text></div>
+        <div class="navbarDiv" :style="tabStyles">
+            <div class="detail" @click="firstDiv('first')">
+                <image style="width: 50px;height: 50px;" src="../../../imgs/index1.png"></image>
+                <text class="detail-text">主页</text>
+            </div>
+            <div class="detail" @click="firstDiv('second')">
+                <image style="width: 50px;height: 50px;" src="../../../imgs/movie2.png"></image>
+                <text class="detail-text">电影</text>
+            </div>
+            <div class="detail"  @click="firstDiv('third')">
+                <image style="width: 50px;height: 50px;" src="../../../imgs/circle3.png"></image>
+                <text class="detail-text">评论</text>
+            </div>
+            <div class="detail" @click="firstDiv('four')">
+                <image style="width: 50px;height: 50px;" src="../../../imgs/my4.png"></image>
+                <text class="detail-text">我的</text>
+            </div>
+          <!--  <div class="div-son" @click="firstDiv('first')">
+                <text class="cell">电影库</text>
+            </div>
             <div class="div-son" @click="firstDiv('second')"><text class="cell">电影圈</text></div>
             <div class="div-son" @click="firstDiv('third')"><text class="cell">GOGO</text></div>
-            <div class="div-son" @click="firstDiv('four')"><text class="cell">我</text></div>
+            <div class="div-son" @click="firstDiv('four')"><text class="cell">我</text></div>-->
         </div>
     </div>
 </template>
@@ -150,5 +168,30 @@ export default {
         line-height: 40px;
         height:40px;
         margin-top: -20px;
+    }
+    .detail{
+        width:187px;
+        height:130px;
+        background-color: rgba(162, 217, 192, 0.2);
+        padding-top: 15px;
+        padding-left: 50px;
+        box-sizing: border-box;
+    }
+    .navbarDiv{
+        height:130px;
+        width:750px;
+        background-color: white;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .detail-text{
+        margin-top: 5px;
+        text-align: left;
     }
 </style>

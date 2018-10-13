@@ -31,6 +31,12 @@ const testVuex = {
     minusVuex (context, params) {
       context.commit('minusVuex', params)
     }
+  },
+  getters: {
+    // ...
+    getCount: (state, getters) => {
+      return state.count
+    }
   }
 }
 
