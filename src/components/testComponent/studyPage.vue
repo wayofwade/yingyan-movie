@@ -2,7 +2,7 @@
     <list class="list">
         <cell class="cell">
             <div class="B-box"  v-for="item in row1">
-                <image class="B-icon" :src="item.icon"></image>
+                <image class="B-icon" :src="item.icon" @click="goTest(item)"></image>
                 <text class="B-title">{{item.title}}</text>
             </div>
         </cell>
@@ -45,11 +45,15 @@ export default {
   data () {
     return {
       row1: [{
-        title: '腔调掌柜',
+        title: '测试vuex',
         icon: 'http://img.alicdn.com/tfs/TB1sWLoRVXXXXbdXXXXXXXXXXXX-140-140.png',
+        name: '测试vuex',
+        url: 'testVuex'
       }, {
-        title: '腔调掌柜',
+        title: '测试图片',
         icon: 'http://gw.alicdn.com/tfs/TB10.R_SpXXXXbtXXXXXXXXXXXX-140-140.png',
+        name: '测试图片',
+        url: 'testImage'
       }, {
         title: '腔调掌柜',
         icon: 'http://img.alicdn.com/tfs/TB1fRVASpXXXXXdXXXXXXXXXXXX-140-140.png',
@@ -70,6 +74,11 @@ export default {
         title: '腔调掌柜',
         icon: 'http://img.alicdn.com/tfs/TB1vRGhSpXXXXaLXpXXXXXXXXXX-140-140.png',
       }]
+    }
+  },
+  methods: {
+    goTest (item) {
+      console.log(item)
     }
   }
 }
