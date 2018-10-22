@@ -46,7 +46,7 @@
 <script>
 import { Utils } from 'weex-ui'
 import helloWorld from './testComponent/HelloWorld.vue'
-import secondDiv from './testComponent/secondDiv.vue'
+import secondDiv from './testComponent/studyPage.vue'
 import thirdDiv from './testComponent/thirdDiv.vue'
 import fourthDiv from './testComponent/fourthDiv.vue'
 import Config from '../config/config' // 引入css和配置文件
@@ -95,7 +95,7 @@ export default {
         this.third = false
         this.four = false */
       } else if (value === 'third') {
-        this.$router.push('/testVuex')
+        this.$router.push('/studyPage')
         /* this.first = false
         this.second = false
         this.third = true

@@ -8,7 +8,7 @@
             <text class="buttonDiv" @click="minusVuex()">vuex减3</text>
         </div>
         <div>
-            <text class="buttonDiv">{{count}}</text>
+            <text class="buttonDiv">{{msg}}</text>
             <text class="buttonDiv">{{msg}}</text>
         </div>
     </div>
@@ -17,7 +17,6 @@
 
 <script>
 // import someComponent from './someComponent'
-// todo
 export default {
   name: '',
   data () {

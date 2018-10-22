@@ -79,6 +79,7 @@ export default {
   methods: {
     goTest (item) {
       console.log(item)
+      this.$router.push('./' + item.url)
     }
   }
 }

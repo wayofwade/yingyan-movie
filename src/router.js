@@ -9,7 +9,11 @@ import movieList from '@/components/movieList/movieList'
 import movieDetail from '@/components/movieList/movieDetail'
 import movieCircle from '@/components/movieCircle/movieCircle'
 import myMovies from '@/components/myMovies/myMovies'
-import test from '@/routers/test.js'
+import thirdDiv from '@/components/testComponent/thirdDiv.vue'
+import testVuex from '@/components/testComponent/testVuex.vue'
+import studyPage from '@/components/testComponent/studyPage.vue'
+import testImage from '@/components/testComponent/testImage.vue'
+// import('@/components/testComponent/studyPage.vue')
 
 Vue.use(Router)
 
@@ -39,6 +43,31 @@ module.exports = new Router({
       path: '/movieDetail',
       name: 'movieDetail',
       component: movieDetail
+    },
+    {
+      path: '/thirdDiv',
+      name: '第三个',
+      component: thirdDiv
+    },
+    {
+      path: '/testVuex',
+      name: '测试vuex',
+      component: testVuex
+    },
+    {
+      path: '/studyPage',
+      component: studyPage,
+      title: '学习demo'
+    },
+    {
+      path: '/testImage',
+      component: testImage,
+      title: '测试image'
     }
-  ].concat(test)
+    /* {
+      path: '/testImage',
+      component: () => import('@/components/testComponent/testImage.vue'),
+      title: '测试image'
+    } */
+  ]
 })
