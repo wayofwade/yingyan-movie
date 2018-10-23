@@ -1,5 +1,6 @@
 <template>
     <div>
+        <text class="buttonDiv"> 跳转效果</text>
         <scroller class="scroller">
             <div class="row" ref="item" v-for="(name, index) in rows" :key="index">
                 <text class="text">{{name}}</text>
@@ -70,5 +71,8 @@ export default {
         border-style: solid;
         border-color: rgb(162, 217, 192);
         background-color: rgba(162, 217, 192, 0.2);
+    }
+    .buttonDiv{
+        font-size: 50px;
     }
 </style>

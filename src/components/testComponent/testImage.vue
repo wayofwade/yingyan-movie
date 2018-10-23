@@ -1,11 +1,20 @@
 <template>
     <div>
-    <div>{{msg}}</div>
+        <text style="fontSize: 50px;">
+            测试图片的页面
+        </text>
         <div>
-    <image width="50px" height=50px; src="../../../../imgs/index1.png"></image>
+            <text style="fontSize: 30px;">
+            {{msg}}
+            </text>
         </div>
-    <div>{{msg1}}</div>
-    <image style="width: 50px;height: 50px;" src="../../../../imgs/index1.png"></image>
+       <div>
+        <image src="../../../../imgs/index1.png"></image>
+       </div>
+        <div>
+            <text style="font-size: 30px;">{{msg1}}</text>
+        </div>
+        <image style="width: 80px;height: 80px;" src="../../../../imgs/index1.png"></image>
     </div>
     <!--<someComponent></someComponent>-->
 </template>

@@ -8,7 +8,7 @@
         </cell>
         <cell class="cell">
             <div class="B-box"  v-for="item in row2">
-                <image class="B-icon" :src="item.icon"></image>
+                <image class="B-icon" :src="item.icon" @click="goTest(item)"></image>
                 <text class="B-title">{{item.title}}</text>
             </div>
         </cell>
@@ -55,24 +55,30 @@ export default {
         name: '测试图片',
         url: 'testImage'
       }, {
-        title: '腔调掌柜',
+        title: 'TextAndDiv',
         icon: 'http://img.alicdn.com/tfs/TB1fRVASpXXXXXdXXXXXXXXXXXX-140-140.png',
+        url: 'TextAndDiv'
       }, {
-        title: '腔调掌柜',
+        title: 'ZIndex',
         icon: 'http://img.alicdn.com/tfs/TB1_TkdPVXXXXcJXXXXXXXXXXXX-140-140.png',
+        url: 'ZIndex'
       }],
       row2: [{
-        title: '腔调掌柜',
+        title: '轮播图',
         icon: 'http://img.alicdn.com/tfs/TB1057iSXXXXXaXaVXXXXXXXXXX-140-140.png',
+        url: 'pictureCircle'
       }, {
-        title: '腔调掌柜',
+        title: '跳转',
         icon: 'http://img.alicdn.com/tfs/TB1tN6cRVXXXXbiXpXXXXXXXXXX-140-140.png',
+        url: 'jumpDiv'
       }, {
-        title: '腔调掌柜',
+        title: '菜单栏',
         icon: 'http://img.alicdn.com/tfs/TB1oYDaSXXXXXa7XpXXXXXXXXXX-140-140.png',
+        url: 'testTags'
       }, {
         title: '腔调掌柜',
         icon: 'http://img.alicdn.com/tfs/TB1vRGhSpXXXXaLXpXXXXXXXXXX-140-140.png',
+        url: ''
       }]
     }
   },

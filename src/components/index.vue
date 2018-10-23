@@ -45,10 +45,10 @@
 </template>
 <script>
 import { Utils } from 'weex-ui'
-import helloWorld from './testComponent/HelloWorld.vue'
+import helloWorld from './testComponent/TextAndDiv.vue'
 import secondDiv from './testComponent/studyPage.vue'
-import thirdDiv from './testComponent/thirdDiv.vue'
-import fourthDiv from './testComponent/fourthDiv.vue'
+import thirdDiv from './testComponent/jumpDiv.vue'
+import fourthDiv from './testComponent/pictureCircle.vue'
 import Config from '../config/config' // 引入css和配置文件
 
 export default {

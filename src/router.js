@@ -9,10 +9,14 @@ import movieList from '@/components/movieList/movieList'
 import movieDetail from '@/components/movieList/movieDetail'
 import movieCircle from '@/components/movieCircle/movieCircle'
 import myMovies from '@/components/myMovies/myMovies'
-import thirdDiv from '@/components/testComponent/thirdDiv.vue'
 import testVuex from '@/components/testComponent/testVuex.vue'
 import studyPage from '@/components/testComponent/studyPage.vue'
 import testImage from '@/components/testComponent/testImage.vue'
+import TextAndDiv from '@/components/testComponent/TextAndDiv.vue'
+import ZIndex from '@/components/testComponent/ZIndex.vue'
+import pictureCircle from '@/components/testComponent/pictureCircle.vue'
+import jumpDiv from '@/components/testComponent/jumpDiv.vue'
+import testTags from '@/components/testComponent/testTags.vue'
 // import('@/components/testComponent/studyPage.vue')
 
 Vue.use(Router)
@@ -45,9 +49,9 @@ module.exports = new Router({
       component: movieDetail
     },
     {
-      path: '/thirdDiv',
-      name: '第三个',
-      component: thirdDiv
+      path: '/testTags',
+      name: '测试菜单栏',
+      component: testTags
     },
     {
       path: '/testVuex',
@@ -63,6 +67,26 @@ module.exports = new Router({
       path: '/testImage',
       component: testImage,
       title: '测试image'
+    },
+    {
+      path: '/TextAndDiv',
+      component: TextAndDiv,
+      title: '测试div'
+    },
+    {
+      path: '/ZIndex',
+      component: ZIndex,
+      title: '测试ZIndex'
+    },
+    {
+      path: '/pictureCircle',
+      component: pictureCircle,
+      title: '轮播图'
+    },
+    {
+      path: '/jumpDiv',
+      component: jumpDiv,
+      title: '跳转'
     }
     /* {
       path: '/testImage',

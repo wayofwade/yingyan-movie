@@ -1,5 +1,6 @@
 <template>
     <div style="justify-content:center">
+        <text class="buttonDiv"> 轮播图效果</text>
         <slider class="size">
             <div v-for="src in posters">
                 <image class="size" resize="cover" :src="src"></image>
@@ -27,5 +28,8 @@ export default {
     .size {
         width: 750px;
         height: 1080px;
+    }
+    .buttonDiv{
+        font-size: 50px;
     }
 </style>

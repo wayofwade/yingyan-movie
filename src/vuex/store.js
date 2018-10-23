@@ -53,7 +53,7 @@ const store = new Vuex.Store({
   mutations: mutations,
   actions: actions,
   modules: {
-    example, testVuex
+    testVuex, example
   }
 })
 

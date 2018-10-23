@@ -1,7 +1,7 @@
 <template>
     <list @loadmore="fetch" loadmoreoffset="10">
         <header>
-            <text class="banner">电影圈</text>
+            <text class="banner">电影圈todo</text>
         </header>
         <cell v-for="(num, i) in lists" :key="i">
             <div class="panel">

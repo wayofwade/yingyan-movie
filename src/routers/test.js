@@ -2,7 +2,7 @@
  * Created by chencc on 2018/9/16.
  * 引入vuex手机端调试有问题
  */
-import thirdDiv from '@/components/testComponent/thirdDiv.vue'
+import thirdDiv from '@/components/testComponent/jumpDiv.vue'
 import testVuex from '@/components/testComponent/testVuex.vue'
 const tesst = [
   {
@@ -24,7 +24,7 @@ const tesst = [
 /*const test = [
   {
     path: '/thirdDiv',
-    component: () => import('@/components/testComponent/thirdDiv.vue'),
+    component: () => import('@/components/testComponent/jumpDiv.vue'),
     title: '第三个'
   },
   {
@@ -34,7 +34,7 @@ const tesst = [
   },
   {
     path: '/fourthDiv',
-    component: () => import('@/components/testComponent/fourthDiv.vue'),
+    component: () => import('@/components/testComponent/pictureCircle.vue'),
     title: '第四个'
   },
   {
@@ -44,12 +44,12 @@ const tesst = [
   },
   {
     path: '/helloWorld',
-    component: () => import('@/components/testComponent/HelloWorld.vue'),
+    component: () => import('@/components/testComponent/TextAndDiv.vue'),
     title: 'hello'
   },
   {
     path: '/testIndex',
-    component: () => import('@/components/testComponent/testIndex.vue'),
+    component: () => import('@/components/testComponent/testTags.vue'),
     title: 'testIndex'
   }
 ]*/
@@ -57,7 +57,7 @@ module.exports = { tesst }
 /* export default [
   {
     path: '/thirdDiv',
-    component: () => import('@/components/testComponent/thirdDiv.vue'),
+    component: () => import('@/components/testComponent/jumpDiv.vue'),
     title: '第三个'
   },
   {
@@ -67,7 +67,7 @@ module.exports = { tesst }
   },
   {
     path: '/fourthDiv',
-    component: () => import('@/components/testComponent/fourthDiv.vue'),
+    component: () => import('@/components/testComponent/pictureCircle.vue'),
     title: '第四个'
   },
   {
@@ -77,12 +77,12 @@ module.exports = { tesst }
   },
   {
     path: '/helloWorld',
-    component: () => import('@/components/testComponent/HelloWorld.vue'),
+    component: () => import('@/components/testComponent/TextAndDiv.vue'),
     title: 'hello'
   },
   {
     path: '/testIndex',
-    component: () => import('@/components/testComponent/testIndex.vue'),
+    component: () => import('@/components/testComponent/testTags.vue'),
     title: 'testIndex'
   }
 ] */
