@@ -17,6 +17,7 @@ import ZIndex from '@/components/testComponent/ZIndex.vue'
 import pictureCircle from '@/components/testComponent/pictureCircle.vue'
 import jumpDiv from '@/components/testComponent/jumpDiv.vue'
 import testTags from '@/components/testComponent/testTags.vue'
+import father from '@/components/testComponent/father.vue'
 // import('@/components/testComponent/studyPage.vue')
 
 Vue.use(Router)
@@ -87,6 +88,11 @@ module.exports = new Router({
       path: '/jumpDiv',
       component: jumpDiv,
       title: '跳转'
+    },
+    {
+      path: '/father',
+      component: father,
+      title: '父组件'
     }
     /* {
       path: '/testImage',

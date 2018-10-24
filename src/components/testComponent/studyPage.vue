@@ -76,9 +76,9 @@ export default {
         icon: 'http://img.alicdn.com/tfs/TB1oYDaSXXXXXa7XpXXXXXXXXXX-140-140.png',
         url: 'testTags'
       }, {
-        title: '腔调掌柜',
+        title: '父子传值',
         icon: 'http://img.alicdn.com/tfs/TB1vRGhSpXXXXaLXpXXXXXXXXXX-140-140.png',
-        url: ''
+        url: 'father'
       }]
     }
   },

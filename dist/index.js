@@ -11365,16 +11365,19 @@ var _testTags = __webpack_require__(299);
 
 var _testTags2 = _interopRequireDefault(_testTags);
 
+var _father = __webpack_require__(303);
+
+var _father2 = _interopRequireDefault(_father);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import('@/components/testComponent/studyPage.vue')
 
-/* global Vue */
+// import HelloWorld from '@/components/HelloWorld'
+Vue.use(_vueRouter2.default); /* global Vue */
 /* 1-此路由是针对component/index.vue的
 * 2-import加入路由移动端显示不了，[...c, ...a]这种形式只支持一个元素的list
 *  */
-Vue.use(_vueRouter2.default);
-// import HelloWorld from '@/components/HelloWorld'
 
 
 module.exports = new _vueRouter2.default({
@@ -11430,6 +11433,10 @@ module.exports = new _vueRouter2.default({
     path: '/jumpDiv',
     component: _jumpDiv2.default,
     title: '跳转'
+  }, {
+    path: '/father',
+    component: _father2.default,
+    title: '父组件'
     /* {
       path: '/testImage',
       component: () => import('@/components/testComponent/testImage.vue'),
@@ -30956,9 +30963,9 @@ exports.default = {
         icon: 'http://img.alicdn.com/tfs/TB1oYDaSXXXXXa7XpXXXXXXXXXX-140-140.png',
         url: 'testTags'
       }, {
-        title: '腔调掌柜',
+        title: '父子传值',
         icon: 'http://img.alicdn.com/tfs/TB1vRGhSpXXXXaLXpXXXXXXXXXX-140-140.png',
-        url: ''
+        url: 'father'
       }]
     };
   },
@@ -32842,6 +32849,276 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["item-container"],
     style: _vm.contentStyle
   }, [_c('text', [_vm._v("我的主页")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 303 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(304)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(305)
+
+/* template */
+var __vue_template__ = __webpack_require__(310)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/testComponent/father.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-43bdef70"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 304 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "title": {
+    "fontSize": "50"
+  }
+}
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _children = __webpack_require__(306);
+
+var _children2 = _interopRequireDefault(_children);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  name: '',
+  data: function data() {
+    return {
+      msg: '父组件加3',
+      counts: 20,
+      fromFather: '来自父组件的内容'
+    };
+  },
+
+  components: {
+    Children: _children2.default
+  },
+  methods: {
+    add: function add() {
+      this.counts += 3;
+    },
+    addChild: function addChild() {
+      this.$refs.c1.add();
+    },
+    addFather: function addFather() {
+      this.add();
+    }
+  }
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 306 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(307)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(308)
+
+/* template */
+var __vue_template__ = __webpack_require__(309)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/chencc/work/WebstormProjects/yingyan-movie-mac/src/components/testComponent/children.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-0e7e4f93"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 307 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "title": {
+    "fontSize": "50"
+  }
+}
+
+/***/ }),
+/* 308 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// import someComponent from './someComponent'
+exports.default = {
+  name: 'Children',
+  props: ['toSon'],
+  data: function data() {
+    return {
+      msg: '子组件加2',
+      counts: 100
+    };
+  },
+
+  component: {
+    // someComponent
+  },
+  methods: {
+    add: function add() {
+      this.counts += 2;
+    },
+    addFather: function addFather() {
+      this.$emit('addFather');
+    }
+  }
+};
+
+/***/ }),
+/* 309 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('text', {
+    staticClass: ["title"]
+  }, [_vm._v(_vm._s(_vm.msg))]), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v(_vm._s(_vm.counts))]), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v(_vm._s(_vm.toSon))]), _c('button', {
+    staticStyle: {
+      backgroundColor: "yellow"
+    },
+    on: {
+      "click": function($event) {
+        _vm.addFather()
+      }
+    }
+  }, [_c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("给父组件添加")])])], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 310 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('text', {
+    staticClass: ["title"]
+  }, [_vm._v(_vm._s(_vm.msg))]), _c('button', {
+    staticStyle: {
+      backgroundColor: "yellow"
+    },
+    on: {
+      "click": function($event) {
+        _vm.addChild()
+      }
+    }
+  }, [_c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("给子组件添加")])]), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v(_vm._s(_vm.counts))]), _c('div', {
+    staticStyle: {
+      width: "750px",
+      height: "80px",
+      backgroundColor: "#dddddd"
+    }
+  }), _c('children', {
+    ref: "c1",
+    attrs: {
+      "toSon": _vm.fromFather
+    },
+    on: {
+      "addFather": _vm.addFather
+    }
+  })], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
