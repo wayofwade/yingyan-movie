@@ -31850,6 +31850,10 @@ module.exports = {
     "textAlign": "left",
     "wordBreak": "break-all",
     "color": "#41B883"
+  },
+  "size": {
+    "width": "750",
+    "height": "300"
   }
 }
 
@@ -31884,6 +31888,11 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
 
 var modal = weex.requireModule('modal');
 var LOADMORE_COUNT = 4;
@@ -31893,7 +31902,8 @@ exports.default = {
     return {
       lists: [1, 2, 3, 4, 5],
       userName: '用户名字',
-      userMessage: '用户发的朋友圈信息哈哈哈哈这个电影还不错的哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈'
+      userMessage: '用户发的朋友圈信息哈哈哈哈这个电影还不错的哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
+      posters: ['https://gw.alicdn.com/tfs/TB1MqHJkVuWBuNjSszbXXcS7FXa-1080-1574.jpg', 'https://gw.alicdn.com/tfs/TB1u1gjkY1YBuNjSszhXXcUsFXa-1080-1518.jpg', 'https://gw.alicdn.com/tfs/TB1TKvQk79WBuNjSspeXXaz5VXa-900-1312.jpg', 'https://gw.alicdn.com/tfs/TB1nDsrkYSYBuNjSspfXXcZCpXa-1080-1575.jpg']
     };
   },
 
@@ -31928,7 +31938,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "loadmore": _vm.fetch
     }
-  }, [_vm._m(0), _vm._l((_vm.lists), function(num, i) {
+  }, [_vm._m(0), _c('slider', {
+    staticClass: ["size"]
+  }, _vm._l((_vm.posters), function(src) {
+    return _c('div', [_c('image', {
+      staticClass: ["size"],
+      attrs: {
+        "resize": "cover",
+        "src": src
+      }
+    })])
+  })), _vm._l((_vm.lists), function(num, i) {
     return _c('cell', {
       key: i,
       appendAsTree: true,

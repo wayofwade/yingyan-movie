@@ -3,6 +3,11 @@
         <header>
             <text class="banner">电影圈todo</text>
         </header>
+        <slider class="size">
+            <div v-for="src in posters">
+                <image class="size" resize="cover" :src="src"></image>
+            </div>
+        </slider>
         <cell v-for="(num, i) in lists" :key="i">
             <div class="panel">
                 <div class="moviePic">
@@ -28,7 +33,13 @@ export default {
     return {
       lists: [1, 2, 3, 4, 5],
       userName: '用户名字',
-      userMessage: '用户发的朋友圈信息哈哈哈哈这个电影还不错的哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈'
+      userMessage: '用户发的朋友圈信息哈哈哈哈这个电影还不错的哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
+      posters: [
+        'https://gw.alicdn.com/tfs/TB1MqHJkVuWBuNjSszbXXcS7FXa-1080-1574.jpg',
+        'https://gw.alicdn.com/tfs/TB1u1gjkY1YBuNjSszhXXcUsFXa-1080-1518.jpg',
+        'https://gw.alicdn.com/tfs/TB1TKvQk79WBuNjSspeXXaz5VXa-900-1312.jpg',
+        'https://gw.alicdn.com/tfs/TB1nDsrkYSYBuNjSspfXXcZCpXa-1080-1575.jpg'
+      ]
     }
   },
   methods: {
@@ -94,5 +105,9 @@ export default {
         text-align: left;
         word-break:break-all;
         color: #41B883;
+    }
+    .size {
+        width: 750px;
+        height: 300px;
     }
 </style>
